@@ -13,7 +13,9 @@ export default defineConfig({
       external: [],
       output: {
         // 在UMD构建模式下为这些外部化的依赖提供一个全局变量
-        globals: {}
+        globals: {},
+        // 解决同时使用默认导出和命名导出的警告
+        exports: 'named'
       }
     }
   }

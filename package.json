@@ -1,19 +1,22 @@
 {
   "name": "avatar-gen-js",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "description": "根据用户昵称生成默认头像，支持自定义颜色和图案",
   "main": "dist/index.cjs.js",
   "module": "dist/index.es.js",
   "umd": "dist/index.umd.js",
+  "types": "dist/index.d.ts",
   "exports": {
     ".": {
+      "types": "./dist/index.d.ts",
       "import": "./dist/index.es.js",
       "require": "./dist/index.cjs.js"
     }
   },
   "scripts": {
     "build": "vite build",
-    "build:all": "npm run build",
+    "copy-types": "node scripts/copy-types.js",
+    "build:all": "npm run build && npm run copy-types",
     "dev": "vite",
     "start": "vite --port 3000",
     "test": "echo \"Error: no test specified\" && exit 1",
