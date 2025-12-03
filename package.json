@@ -1,0 +1,46 @@
+{
+  "name": "avatar-gen-js",
+  "version": "1.1.1",
+  "description": "根据用户昵称生成默认头像，支持自定义颜色和图案",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.es.js",
+  "umd": "dist/index.umd.js",
+  "exports": {
+    ".": {
+      "import": "./dist/index.es.js",
+      "require": "./dist/index.cjs.js"
+    }
+  },
+  "scripts": {
+    "build": "vite build",
+    "build:all": "npm run build",
+    "dev": "vite",
+    "start": "vite --port 3000",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublishOnly": "npm run build:all"
+  },
+  "keywords": [
+    "avatar",
+    "default-avatar",
+    "profile-picture",
+    "svg",
+    "generator"
+  ],
+  "author": "kohaiy",
+  "license": "MIT",
+  "devDependencies": {
+    "vite": "^7.2.6"
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kohaiy/avatar-gen-js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kohaiy/avatar-gen-js/issues"
+  },
+  "homepage": "https://github.com/kohaiy/avatar-gen-js#readme"
+}
